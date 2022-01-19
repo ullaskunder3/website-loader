@@ -3,7 +3,10 @@
 *,
 *::before,
 *::after {
-    box-sizing: border-box;
+    box-sizing:border-box; 
+    -moz-box-sizing:border-box; 
+    -webkit-box-sizing:border-box; 
+    -ms-box-sizing:border-box;
     margin: 0;
     padding: 0;
     text-decoration: none;
@@ -48,18 +51,22 @@ body *{
     justify-content: center;
 }
 .loader img{
-    width: 15rem;
+    width: 10%;
 }
 .logo img{
     width: 2rem;
+}
+.loader.hidden{
+    animation: fadeOut 1s;
+    animation-fill-mode: forwards;
 }
 nav{
     display: flex;
     align-items: center;
     justify-content: space-between;
-
-    margin: 2rem;
+    padding: 10px;
     border-bottom: 1px solid black;
+    background-color: rgb(224, 188, 140);
 }
 nav .nav-links ul{
     display: flex;
@@ -70,24 +77,29 @@ nav .nav-links ul li{
 .nav-links *{
     color: black;
 }
-.loader.hidden{
-    animation: fadeOut 1s;
-    animation-fill-mode: forwards;
-}
-.quote__section{
+.quote__section p{
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-direction: column;
     height: calc(100vh - 100px);
     text-align: center;
-}
-.quote__section p{
     font-weight: bold;
     font-size: 1.2rem;
 }
 .quote__section .quote__by{
     font-size: 1rem;
     font-weight: 500;
+}
+footer{
+    background-color: black;
+    color: white;
+    position: fixed;
+    width: 100%;
+    padding: .5rem 0;
+    font-size: .7rem;
+    bottom: 0;
+    text-align: center;
 }
 
 @keyframes fadeOut {
