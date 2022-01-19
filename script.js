@@ -3,7 +3,7 @@ window.addEventListener('load', ()=>{
 
     // loader.classList.add('hidden')
 
-    setInterval(()=>{
+    setTimeout(()=>{
         loader.className += ' hidden'; 
     }, 800)
 })
